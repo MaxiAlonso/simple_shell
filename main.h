@@ -22,5 +22,6 @@ char *_getenv(char* str);
 void printenv(void);
 extern char **environ;
 void ctrlC(int sig_num);
+int breakline(char *str_line);
 
 #endif
