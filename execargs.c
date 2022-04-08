@@ -43,6 +43,6 @@ void execarg(char **args)
 				free(args[0]);
 		}
 		else
-			perror(NULL);
+			perror(args[0]);
 	}
 }

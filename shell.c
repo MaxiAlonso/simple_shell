@@ -25,7 +25,7 @@ int main(void)
 		}
 		if (breakline(str_line) == 0)
 			continue;
-		args = stringtok(str_line, " \n");
+		args = stringtok(str_line, " \t\n");
 		if (args[0] != NULL)
 		{
 			if (_strcmp(args[0], ex) == 0)
