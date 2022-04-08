@@ -36,8 +36,8 @@ char *iscommand(char **args)
 			return (file_path);
 		}
 		i++;
-	}
 	free(file_path);
+	}
 	free(str_path);
 	free(path);
 	return (NULL);

@@ -33,7 +33,7 @@ void execarg(char **args)
 				if (execve(args[0], args, environ) == -1)
 				{
 					perror(NULL);
-					free(args[0]), free(args);
+					free(args);
 					exit(-1);
 				}
 			}
