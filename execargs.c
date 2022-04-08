@@ -20,10 +20,9 @@ void execarg(char **args)
 			if (args[0] == NULL)
 			{
 				free(args[0]);
-				perror("NULL");
 				return;
 			}
-		succes = 1;
+			succes = 1;
 		}
 		if (stat(args[0], &st) == 0)
 		{
@@ -32,7 +31,8 @@ void execarg(char **args)
 			{
 				if (execve(args[0], args, environ) == -1)
 				{
-					perror(NULL);
+					perror(args[0]);
+					free(args[0]);
 					free(args);
 					exit(-1);
 				}
