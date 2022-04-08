@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * iscommand - verify if the input is an executable file in the path.
+ * @args: list of arguments obtained from the tokenized string input.
+ * Return: return full path where the executable file was found
+ * or NULL otherwise.
+**/
+
 char *iscommand(char **args)
 {
 	int i = 0, j = 0;
