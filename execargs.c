@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * execargs - checks if the inuput read is valid, when it is
+ * the function forks, create a new child and execute.
+ * @args: list of arguments obtained from the tokenized string input.
+ **/
+
 void execarg(char **args)
 {
 	pid_t child_pid;
@@ -31,15 +37,11 @@ void execarg(char **args)
 				}
 			}
 			else
-			{
 				wait(&status);
-			}
 			if (succes == 1)
 				free(args[0]);
 		}
 		else
-		{
 			perror(NULL);
-		}
 	}
 }
