@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * brakline - look for breaklines.
+ * breakline - look for breaklines.
  * @str_line: given string.
  * Return: 0 when the string contains breaklines, 1 otherwise.
  **/
