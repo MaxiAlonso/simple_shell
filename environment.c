@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * _getenv - searches the environment list to find
+ * the environment variable "str".
+ * @str: name of the enviroment variable to search.
+ * Return: pointer to the corresponding value string or NULL othervise.
+ **/
+
 char *_getenv(char *str)
 {
 	unsigned int i = 0, j = 0, k = 0, lenenv = 0, lenstr = 0;
@@ -43,6 +50,10 @@ char *_getenv(char *str)
 	}
 	return (NULL);
 }
+
+/**
+ * printenv - prints the environment variables list.
+ **/
 
 void printenv(void)
 {
