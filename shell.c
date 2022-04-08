@@ -29,10 +29,8 @@ int main(void)
 		if (args[0] != NULL)
 		{
 			if (_strcmp(args[0], ex) == 0)
-			{
-				free(args);
-				break;
-			}
+				if (exit_status(args) == -1)
+					continue;
 		}
 		if (_strcmp(str_line, env) == 0)
 		{

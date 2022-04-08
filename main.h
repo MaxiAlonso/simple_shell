@@ -23,5 +23,7 @@ void printenv(void);
 extern char **environ;
 void ctrlC(int sig_num);
 int breakline(char *str_line);
+int _atoi(char *str);
+int exit_status(char **args);
 
 #endif

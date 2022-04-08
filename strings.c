@@ -70,3 +70,37 @@ int _strcmp(char *s1, char *s2)
 	a = (s1[i] - '0') -  (s2[i] - '0');
 	return (a);
 }
+
+/**
+ * _atoi - convert a string to an integer.
+ * @str: string
+ * Return: Always 0.
+ */
+
+int _atoi(char *str)
+{
+	int i, sign;
+	double a;
+
+	i = 0;
+	a = 0;
+	sign = 1;
+
+	while (str[i])
+	{
+		if (str[i] == '-')
+		{
+			sign = sign * -1;
+		}
+		if (str[i] - '0' >= 0 && str[i] - '0' <= 9)
+		{
+			a = (a * 10) + str[i] - '0';
+		}
+		else if (a != 0)
+		{
+			break;
+		}
+	i++;
+	}
+	return (a * sign);
+}
