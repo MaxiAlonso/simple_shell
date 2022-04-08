@@ -4,7 +4,7 @@
  * _getenv - searches the environment list to find
  * the environment variable "str".
  * @str: name of the enviroment variable to search. M.A.E.S.
- * Return: pointer to the corresponding value string or NULL othervise.
+ * Return: pointer to the corresponding value string or NULL othervise
  **/
 
 char *_getenv(char *str)
