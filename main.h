@@ -25,5 +25,9 @@ void ctrlC(int sig_num);
 int breakline(char *str_line);
 int _atoi(char *str);
 int exit_status(char **args);
+int _setenv(const char *name, const char *value, int overwrite);
+int _unsetenv(const char *name);
+int _setenv(const char *name, const char *value, int overwrite);
+int overwrite_env(const char *name, const char *value);
 
 #endif

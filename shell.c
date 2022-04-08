@@ -35,6 +35,7 @@ int main(void)
 		if (_strcmp(str_line, env) == 0)
 		{
 			printenv();
+			free(args);
 			continue;
 		}
 		execarg(args);
