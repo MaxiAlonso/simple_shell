@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * execargs - checks if the inuput read is valid, when it is
+ * execarg - checks if the inuput read is valid, when it is
  * the function forks, create a new child and execute.
  * @args: list of arguments obtained from the tokenized string input.
  **/
