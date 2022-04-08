@@ -7,7 +7,7 @@
 #include <string.h>
 #include <signal.h>
 #include <unistd.h>
-#include <sys/types.>
+#include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
 
