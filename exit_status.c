@@ -21,7 +21,10 @@ int exit_status(char **args)
 		}
 		else
 		{
-			perror(args[1]);
+			write(STDOUT_FILENO, args[0], _strlen(args[0]));
+			write(STDOUT_FILENO, ": Illegal number: ", 19);
+			write(STDOUT_FILENO, args[1], _strlen(args[1]));
+			write(STDOUT_FILENO, "\n", 1);
 			free(args);
 			return (-1);
 		}
