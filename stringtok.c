@@ -16,7 +16,8 @@ char **stringtok(char *str_line, const char *delimitator)
 
 	while (str_line[i] != '\0')
 	{
-		if (str_line[i] != 32 && str_line[i] != 10 && str_line[i] != 58 && str_line[i] != 9)
+		if (str_line[i] != 32 && str_line[i] != 10
+				       && str_line[i] != 58 && str_line[i] != 9)
 		{
 			while (str_line[i] != 32 && str_line[i] != 10 && str_line[i] != 9
 					&& str_line[i] != 58 && str_line[i] != '\0')
