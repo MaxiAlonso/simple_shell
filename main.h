@@ -29,5 +29,6 @@ int _setenv(const char *name, const char *value, int overwrite);
 int _unsetenv(const char *name);
 int _setenv(const char *name, const char *value, int overwrite);
 int overwrite_env(const char *name, const char *value);
+int builtin(char **args);
 
 #endif
