@@ -81,8 +81,10 @@ void printenv(void)
 int _setenv(const char *name, const char *value, int overwrite)
 {
 	unsigned int i = 0, lenname = 0, lenvalue = 0;
+	char *getenv = NULL;
 
-	if (_getenv((char *)name) == NULL)
+	getenv = _getenv((char *)name);
+	if (getenv == NULL)
 	{
 		lenname = _strlen((char *)name);
 		lenvalue = _strlen((char *)value);
@@ -102,7 +104,10 @@ int _setenv(const char *name, const char *value, int overwrite)
 	else
 	{
 		if (overwrite == 1)
+		{
+			free(getenv);
 			return (overwrite_env(name, value));
+		}
 		else
 			return (0);
 	}
@@ -118,8 +123,8 @@ int _setenv(const char *name, const char *value, int overwrite)
 
 int overwrite_env(const char *name, const char *value)
 {
-	unsigned int i = 0, j = 0, k = 0, lenvar = 0, lenenv = 0;
-	char *envvar = NULL, *envval = NULL;
+	unsigned int i = 0, j = 0, lenvar = 0, lenenv = 0;
+	char *envvar = NULL;
 
 	if (name != NULL || value != NULL)
 	{
@@ -138,19 +143,16 @@ int overwrite_env(const char *name, const char *value)
 			envvar[j] = '\0';
 			if (_strcmp((char *)name, envvar) == 0)
 			{
-				environ[i] = realloc(environ[i], (sizeof(char) * (lenenv + 1)));
-				if (envval == NULL)
+				environ[i] = calloc(1, (sizeof(char) * (lenvar + 1 + lenenv + 1)));
+				if (environ[i] == NULL)
 				{
-					if (envval == NULL)
-						return (-1);
+					free(envvar);
+					return (-1);
 				}
-				j++;
-				while (value[k] != '\0')
-				{
-					environ[i][j] = value[k];
-					j++, k++;
-				}
-				environ[i][j] = '\0', free(envvar);
+				_strcat(environ[i], envvar);
+				_strcat(environ[i], "=");
+				_strcat(environ[i], (char *)value);
+				free(envvar);
 				return (0);
 			}
 			free(envvar);
