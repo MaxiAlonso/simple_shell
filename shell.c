@@ -6,9 +6,9 @@
 
 int main(void)
 {
-	int bytes_read = 0, loop = 0;
+	int bytes_read = 0, loop = 0, exstat = 0;
 	size_t size = 0;
-	char *str_line = NULL, *ex = "exit", *env = "env";
+	char *str_line = NULL;
 	char **args = NULL;
 
 	while (loop == 0)
@@ -28,18 +28,19 @@ int main(void)
 		args = stringtok(str_line, " \t\n");
 		if (args[0] != NULL)
 		{
-			if (_strcmp(args[0], ex) == 0)
-				if (exit_status(args) == -1)
+			if (_strcmp(args[0], "exit") == 0)
+			{
+				exstat = exit_status(args);
+				if (exstat < 0)
 					continue;
-		}
-		if (_strcmp(str_line, env) == 0)
-		{
-			printenv();
+				free(str_line);
+				exit(exstat);
+			}
+			if (builtin(args) == 1)
+				continue;
+			execarg(args);
 			free(args);
-			continue;
 		}
-		execarg(args);
-		free(args);
 	}
 	free(str_line);
 	return (0);
