@@ -43,6 +43,9 @@ void execarg(char **args)
 				free(args[0]);
 		}
 		else
-			perror(args[0]);
+		{
+			write(STDOUT_FILENO, args[0], _strlen(args[0]));
+			write(STDOUT_FILENO, ": not found\n", 12);
+		}
 	}
 }
