@@ -38,7 +38,8 @@ char *iscommand(char **args)
 		i++;
 	free(file_path);
 	}
-	perror(args[0]);
+	write(STDOUT_FILENO, args[0], _strlen(args[0]));
+	write(STDOUT_FILENO, ": not found\n", 12);
 	free(str_path);
 	free(path);
 	return (NULL);
