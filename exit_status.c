@@ -7,32 +7,31 @@
 
 int exit_status(char **args)
 {
-	int status = 0;
+	int exstat = 0, i = 0;
 
 	if (args[1] != NULL)
 	{
-		status = _atoi(args[1]);
+		exstat = _atoi(args[1]);
 
-		if (args[1][0] >= '0' && args[1][0] <= '9')
+		while (args[1][i] != '\0')
 		{
-			free(args[0]);
-			free(args);
-			exit(status);
+			if (args[1][i] < '0' || args[1][i] > '9')
+			{
+				write(STDOUT_FILENO, args[0], _strlen(args[0]));
+				write(STDOUT_FILENO, ": Illegal number: ", 19);
+				write(STDOUT_FILENO, args[1], _strlen(args[1]));
+				write(STDOUT_FILENO, "\n", 1);
+				free(args);
+				return (-1);
+			}
+		i++;
 		}
-		else
-		{
-			write(STDOUT_FILENO, args[0], _strlen(args[0]));
-			write(STDOUT_FILENO, ": Illegal number: ", 19);
-			write(STDOUT_FILENO, args[1], _strlen(args[1]));
-			write(STDOUT_FILENO, "\n", 1);
-			free(args);
-			return (-1);
-		}
+		free(args);
+		return (exstat);
 	}
 	else
 	{
-		free(args[0]);
 		free(args);
-		exit(0);
 	}
+	return (0);
 }
