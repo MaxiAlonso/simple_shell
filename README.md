@@ -33,12 +33,23 @@ echo ls | ./hsh
 
 ## Built-ins used
 
-| Command             | Definition                                                                                |
-| ------------------- | ----------------------------------------------------------------------------------------- |
-| exit                | Terminate the process, with an optional exit status.                                      |
-| env                 | Obtain the current environment.                                                           |
-| setenv [var][value] | Change or add an environment variable.                                                    |
-| unsetenv [var]      | Delete a variable from the environment.                                                   |
+| Command             | Definition                                          |
+| ------------------- | ----------------------------------------------------|
+| exit                | Terminate the process, with an optional exit status.|
+| env                 | Obtain the current environment.                     |
+| setenv [var][value] | Change or add an environment variable.              |
+| unsetenv [var]      | Delete a variable from the environment.             |
+
+We may introduce the following built-in commands in a future version:
+
+| Command             | Definition                        |
+| ------------------- | ----------------------------------|
+| alias               | Set an alias                      |
+| cd [dir]            | Change the directory.             |
+| help [built-in]     | Read documentation for a built-in.|
+| history             | View the history of the shell.    |
+
+##
 
 
 ### Authors
