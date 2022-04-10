@@ -5,6 +5,13 @@ This is the end of first trimester project of Holberton School curriculum. Our s
 
 After compilation, the resulting program can run stand-alone, either in interactive or non-interactive mode.
 
+### Environment
+
+* Language: C
+* OS: Ubuntu 20.04 LTS
+* Compiler: gcc
+* Style guidelines: [Betty style](https://github.com/holbertonschool/Betty/wiki)
+
 ## Installation and way to use
 
 Clone this repository to your terminal
