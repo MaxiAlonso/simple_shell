@@ -41,6 +41,8 @@ int main(void)
 			execarg(args);
 			free(args);
 		}
+		else
+			free(args);
 	}
 	free(str_line);
 	return (0);
