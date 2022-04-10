@@ -30,6 +30,7 @@ void execarg(char **args)
 			if (execve(args[0], args, environ) == -1)
 			{
 				perror(args[0]);
+				free(args[0]);
 				free(args);
 				exit(-1);
 			}
