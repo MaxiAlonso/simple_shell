@@ -1,24 +1,21 @@
-.\" man Simple Shell
+man Simple Shell
 
-.TH Simple_Shell "11 April 2022" "1.0" "..."
+Simple_Shell "11 April 2022" "1.0"
 
-.SH Name
-.B Simple Shell \- ...
+Name
+Simple Shell
 
-.SH Synompsis
-.B Simple Shell
-
-.SH Description
+Description
 
 A simple version of the basic shell, which is a command languge interpreter that reads standar input commands and executes them.
 As it is a simple version the functionality is limited to certains built-in functions.
 It was created for a Holberton School project by #17 Maximiliano Alonso and Ezequiel Silva.
 
-.SS Invocation
+Invocation
 
 An intereactive simple shell can be called by typing ./hsh. Meanwhile a non intereactive is invoked via a pipe, for
 
-.SS Command execution
+Command execution
 
 After a command has been received, if it is a simple one and an optional list of arguments, the following steps will be taken.
 
@@ -26,7 +23,7 @@ If the command does not contain any slashes, the shell looks for function that g
 
 But if it there is no match at this point, the shell will look into each element of the environmnet variable PATH for a directory containing an executable file in which the name is found. At this point, if the search bring no results, the shell prints an error message.
 
-.SH Built-ins
+Built-ins
 
 exit: Terminate the process, with an optional exit status
 
@@ -36,6 +33,6 @@ setenv: Change or add an environment variable.
 
 unsetenv: delete a variable from the environment
 
-.SH Author 
+Author 
 
 Maximiliano Alonso  and Ezequiel Silva.
