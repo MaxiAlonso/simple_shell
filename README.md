@@ -49,7 +49,9 @@ We may introduce the following built-in commands in a future version:
 | help [built-in]     | Read documentation for a built-in.|
 | history             | View the history of the shell.    |
 
-##
+## Flowchart
+
+<img src="blob:https://web.whatsapp.com/11a38863-5d8a-4095-affd-9864a491520d"
 
 
 ### Authors
