@@ -31,7 +31,7 @@ int main(void)
 			if (_strcmp(args[0], "exit") == 0)
 			{
 				exstat = exit_status(args);
-				if (exstat < 0)
+				if (exstat == 2)
 					continue;
 				free(str_line);
 				exit(exstat);
