@@ -7,12 +7,7 @@
 
 int exit_status(char **args)
 {
-	
-	if (args[1] == NULL)
-		free(args);
-	return (0);
-	
-	/*int exstat = 0, i = 0;
+	int exstat = 0, i = 0;
 
 	if (args[1] != NULL)
 	{
@@ -27,7 +22,7 @@ int exit_status(char **args)
 				write(STDOUT_FILENO, args[1], _strlen(args[1]));
 				write(STDOUT_FILENO, "\n", 1);
 				free(args);
-				return (-1);
+				return (2);
 			}
 		i++;
 		}
@@ -36,7 +31,8 @@ int exit_status(char **args)
 	}
 	else
 	{
+		exstat = EXIT_SUCCESS;
 		free(args);
 		return (exstat);
-	}*/
+	}
 }
