@@ -7,7 +7,12 @@
 
 int exit_status(char **args)
 {
-	int exstat = 0, i = 0;
+	
+	if (args[1] == NULL)
+		free(args);
+	return (0);
+	
+	/*int exstat = 0, i = 0;
 
 	if (args[1] != NULL)
 	{
@@ -33,5 +38,5 @@ int exit_status(char **args)
 	{
 		free(args);
 		return (exstat);
-	}
+	}*/
 }
