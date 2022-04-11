@@ -11,6 +11,8 @@ int exit_status(char **args)
 
 	if (args[1] != NULL)
 	{
+		printf("entro aca\n");
+		printf("arg[1] vale%s\n", args[1]);
 		exstat = _atoi(args[1]);
 
 		while (args[1][i] != '\0')
@@ -31,7 +33,10 @@ int exit_status(char **args)
 	}
 	else
 	{
+		printf("salgo por el else\n");
+		printf("arg[0] vale%s\n", args[0]);
+		printf("arg[1] vale%s\n", args[1]);
 		free(args);
+		return (exstat);
 	}
-	return (0);
 }
