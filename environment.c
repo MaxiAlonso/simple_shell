@@ -126,7 +126,7 @@ int overwrite_env(const char *name, const char *value)
 	unsigned int i = 0, j = 0, lenvar = 0, lenenv = 0;
 	char *envvar = NULL;
 
-	if (name != NULL || value != NULL)
+	if (name != NULL && value != NULL)
 	{
 		lenvar = _strlen((char *)name);
 		while (environ[i] != NULL)
