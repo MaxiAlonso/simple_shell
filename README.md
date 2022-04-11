@@ -51,7 +51,7 @@ We may introduce the following built-in commands in a future version:
 
 ## Flowchart
 
-<img src="blob:https://web.whatsapp.com/11a38863-5d8a-4095-affd-9864a491520d"
+<img src="https://postimg.cc/N2yvHVkX">
 
 
 ### Authors
