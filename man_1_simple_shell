@@ -7,13 +7,13 @@ Simple Shell
 
 Description
 
-A simple version of the basic shell, which is a command languge interpreter that reads standar input commands and executes them.
+A simple version of the basic shell, which is a Unix command line interpreter that reads standar input commands and executes them.
 As it is a simple version the functionality is limited to certains built-in functions.
-It was created for a Holberton School project by #17 Maximiliano Alonso and Ezequiel Silva.
+It was created for the end of trimester project fo Holberton School.
 
 Invocation
 
-An intereactive simple shell can be called by typing ./hsh. Meanwhile a non intereactive is invoked via a pipe, for
+An intereactive simple shell can be called by typing ./hsh. Meanwhile a non intereactive is invoked via a pipe, for example echo ls | .hsh
 
 Command execution
 
@@ -27,12 +27,12 @@ Built-ins
 
 exit: Terminate the process, with an optional exit status
 
-env: Obtains the current environment.
+env: Prints the current environment.
 
 setenv: Change or add an environment variable.
 
 unsetenv: delete a variable from the environment
 
-Author 
+Authors
 
-Maximiliano Alonso  and Ezequiel Silva.
+Ezequiel Silva and Maximiliano Alonso.
