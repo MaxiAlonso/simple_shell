@@ -51,7 +51,7 @@ We may introduce the following built-in commands in a future version:
 
 ## Flowchart
 
-![App Screenshot](https://i.postimg.cc/65SKM4Xm/Whats-App-Image-2022-04-11-at-10-32-12.jpg)
+![App Screenshot](https://i.postimg.cc/K89hGMMZ/untitled-diagram-4-1-1-1-1.jpg)
 
 
 ### Authors
